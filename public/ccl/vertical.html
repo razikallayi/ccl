@@ -1,0 +1,217 @@
+
+<!DOCTYPE html><html class=''>
+<head><meta charset='UTF-8'><meta name="robots" content="noindex">
+
+
+<style class="cp-pen-styles">body {
+  margin: 0;
+  padding: 0 2rem;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+body * {
+  box-sizing: border-box;
+}
+
+.heading {
+  text-align: center;
+}
+
+button,
+.button {
+  position: relative;
+  display: inline-block;
+  color: white;
+  padding: 0.75rem 2rem;
+  margin: 0 auto;
+  background-color: #374d72;
+  border: none;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+button:hover,
+.button:hover {
+  background-color: #374d72;
+}
+button:hover:before, button:hover:after,
+.button:hover:before,
+.button:hover:after {
+  color: #4cc4cf;
+}
+button:after, button:before,
+.button:after,
+.button:before {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* ---------------------- Vertical Tabs */
+.tabs {
+  position: relative;
+  min-height: 0;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  /* ---------------------- Tab */
+  /* ---------------------- Content */
+}
+.tabs .tab {
+  margin-bottom: 1px;
+  /* ---------------------- Tab Toggle */
+}
+@media screen and (min-width: 55rem) {
+  .tabs .tab {
+    float: left;
+    clear: left;
+    width: 30%;
+  }
+}
+.tabs .tab .tab-toggle {
+  padding: 1rem 4rem 1rem 2rem;
+  position: relative;
+  outline: none;
+  width: 100%;
+}
+@media screen and (min-width: 55rem) {
+  .tabs .tab .tab-toggle {
+    text-align: left;
+  }
+}
+.tabs .tab .tab-toggle:after {
+  content: "\25BC";
+  position: absolute;
+  display: block;
+  right: 2rem;
+  top: 50%;
+  -webkit-transform: rotate(0deg) translateY(-50%);
+  -moz-transform: rotate(0deg) translateY(-50%);
+  -ms-transform: rotate(0deg) translateY(-50%);
+  -o-transform: rotate(0deg) translateY(-50%);
+  transform: rotate(0deg) translateY(-50%);
+}
+@media screen and (min-width: 55rem) {
+  .tabs .tab .tab-toggle:after {
+    -webkit-transform: rotate(-90deg) translateX(50%);
+    -moz-transform: rotate(-90deg) translateX(50%);
+    -ms-transform: rotate(-90deg) translateX(50%);
+    -o-transform: rotate(-90deg) translateX(50%);
+    transform: rotate(-90deg) translateX(50%);
+  }
+}
+.tabs .tab .tab-toggle.active {
+  color: #8099c2;
+  background-color: white;
+  cursor: default;
+}
+.tabs .tab .tab-toggle.active:after {
+  color: #8099c2;
+  -webkit-transform: rotate(180deg) translateY(50%);
+  -moz-transform: rotate(180deg) translateY(50%);
+  -ms-transform: rotate(180deg) translateY(50%);
+  -o-transform: rotate(180deg) translateY(50%);
+  transform: rotate(180deg) translateY(50%);
+}
+@media screen and (min-width: 55rem) {
+  .tabs .tab .tab-toggle.active:after {
+    -webkit-transform: rotate(-90deg) translateX(50%) translateY(0);
+    -moz-transform: rotate(-90deg) translateX(50%) translateY(0);
+    -ms-transform: rotate(-90deg) translateX(50%) translateY(0);
+    -o-transform: rotate(-90deg) translateX(50%) translateY(0);
+    transform: rotate(-90deg) translateX(50%) translateY(0);
+    right: 1rem;
+  }
+}
+.tabs .content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 2rem;
+  background-color: #efefef;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  transition: all 1s;
+}
+@media screen and (min-width: 55rem) {
+  .tabs .content {
+    max-height: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70%;
+    opacity: 0;
+    padding: 0rem 2rem 2rem 2rem;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+.tabs .content.active {
+  max-height: 1000px;
+}
+@media screen and (min-width: 55rem) {
+  .tabs .content.active {
+    max-height: none;
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+  }
+}
+.tabs .content > .heading {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+</style></head><body>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+<h1 class="heading">Responsive Accordion to Vertical Tab System</h1>
+<div class="tabs">
+  <div class="tab">
+    <button class="tab-toggle">Tab 1</button>
+  </div>
+  <div class="content">
+    <h3 class="heading">Tab 1 Content</h3>
+    <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis id, eos quo sed obcaecati itaque porro praesentium tempore, ratione quasi deleniti neque rem, recusandae. Tenetur mollitia optio possimus fugiat cumque.</p>
+  </div>
+  <div class="tab">
+    <button class="tab-toggle">Tab 2</button>
+  </div>
+  <div class="content">
+    <h3 class="heading">Tab 2 Content</h3>
+    <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis id, eos quo sed obcaecati itaque porro praesentium tempore, ratione quasi deleniti neque rem, recusandae. Tenetur mollitia optio possimus fugiat cumque.</p>
+  </div>
+  <div class="tab">
+    <button class="tab-toggle">Tab 3</button>
+  </div>
+  <div class="content">
+    <h3 class="heading">Tab 3 Content</h3>
+    <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis id, eos quo sed obcaecati itaque porro praesentium tempore, ratione quasi deleniti neque rem, recusandae. Tenetur mollitia optio possimus fugiat cumque.</p>
+  </div>
+</div>
+<script src='js/jquery-2.1.0.min.js'></script>
+<script>wrapper = $('.tabs');
+tabs = wrapper.find('.tab');
+tabToggle = wrapper.find('.tab-toggle');
+function openTab() {
+    var content = $(this).parent().next('.content'), activeItems = wrapper.find('.active');
+    if (!$(this).hasClass('active')) {
+        $(this).add(content).add(activeItems).toggleClass('active');
+        wrapper.css('min-height', content.outerHeight());
+    }
+}
+;
+tabToggle.on('click', openTab);
+$(window).load(function () {
+    tabToggle.first().trigger('click');
+});
+//# sourceURL=pen.js
+</script>
+</body></html>
